@@ -1,5 +1,5 @@
 import { ListarPensamentosComponent } from './componentes/pensamentos/listar-pensamentos/listar-pensamentos.component';
-import { CriarPensamentoComponent } from './pensamentos/criar-pensamento/criar-pensamento.component';
+import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensamento/criar-pensamento.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 

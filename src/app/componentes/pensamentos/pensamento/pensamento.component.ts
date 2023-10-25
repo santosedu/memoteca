@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Pensamento } from '../pensamento.ts';
+import { Pensamento } from '../pensamento';
 
 @Component({
   selector: 'app-pensamento',
@@ -7,7 +7,7 @@ import { Pensamento } from '../pensamento.ts';
   styleUrls: ['./pensamento.component.css']
 })
 export class PensamentoComponent {
-  @Input() pensamento : Pensamento {
+  @Input() pensamento : Pensamento = {
     id: 0,
     conteudo: 'Learning Angular, finally',
     autoria: 'Eduardo Alves dos Santos',
