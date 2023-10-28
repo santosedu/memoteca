@@ -13,6 +13,8 @@ export class ListarPensamentosComponent {
   constructor(private service: PensamentoService) {  }
 
   ngOnInit(): void{
-    this.service.listar();
+    this.service.listar().subscribe((listaPensamentos) => {
+      this.listaPensamentos = listaPensamentos
+    })
   }
 }

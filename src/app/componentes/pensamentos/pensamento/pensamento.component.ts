@@ -8,10 +8,9 @@ import { Pensamento } from '../pensamento';
 })
 export class PensamentoComponent {
   @Input() pensamento : Pensamento = {
-    id: 0,
-    conteudo: 'Learning Angular, finally',
-    autoria: 'Eduardo Alves dos Santos',
-    modelo: 'modelo3'
+    conteudo: '',
+    autoria: '',
+    modelo: ''
   }
 
   larguraPensamento(): string {
