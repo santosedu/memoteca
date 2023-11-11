@@ -22,6 +22,23 @@ export class ExcluirPensamentoComponent {
     private router: Router,
     private route: ActivatedRoute
   ) {}
-  ngOnInit():void{}
+  ngOnInit():void{
+    const id = this.route.snapshot.paramMap.get('id')
+    this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
+      this.pensamento = pensamento
+    })
+  }
+
+  excluirPensamento() {
+    if(this.pensamento.id) {
+      this.service.excluirPensamento(this.pensamento.id).subscribe(() => {
+        this.router.navigate(['/listarPensamento'])
+      })
+    }
+  }
+
+  cancelar() {
+    this.router.navigate(['/listarPensamento'])
+  }
 
 }
